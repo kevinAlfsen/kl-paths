@@ -488,25 +488,25 @@ ROUTINE planPath
 
   END planPath
 
-ROUTINE planImportPath
-  BEGIN
-    IF this.usePathPlan THEN
-      `PATH_PLAN_NAME`__new(this.origin)
-      `PATH_PLAN_NAME`__importPath(filename)
-
-      IF raster_type = NEARESTNEIGHBOR THEN
-        `PATH_PLAN_NAME`__NN_graph
-      ELSE
-        --(poly_depend, strict_dir)
-        `PATH_PLAN_NAME`__raster_graph(raster_type, poly_depend, TRUE)
-      ENDIF
-
-      `PATH_PLAN_NAME`__MST(`PATH_PLAN_NAME`__closest_bounding_box(start_corner))
-
-      --set point orientation
-      `PATH_PLAN_NAME`__set_orientation( paths__set_orientation((this.coord_system.system), this.idod) )
-    ENDIF
-  END planImportPath
+--ROUTINE planImportPath
+--  BEGIN
+--    IF this.usePathPlan THEN
+--      `PATH_PLAN_NAME`__new(this.origin)
+--      `PATH_PLAN_NAME`__importPath(filename)
+--
+--      IF raster_type = NEARESTNEIGHBOR THEN
+--        `PATH_PLAN_NAME`__NN_graph
+--      ELSE
+--        --(poly_depend, strict_dir)
+--        `PATH_PLAN_NAME`__raster_graph(raster_type, poly_depend, TRUE)
+--      ENDIF
+--
+--      `PATH_PLAN_NAME`__MST(`PATH_PLAN_NAME`__closest_bounding_box(start_corner))
+--
+--      --set point orientation
+--      `PATH_PLAN_NAME`__set_orientation( paths__set_orientation((this.coord_system.system), this.idod) )
+--    ENDIF
+--  END planImportPath
 
 ROUTINE get_start_node
   BEGIN

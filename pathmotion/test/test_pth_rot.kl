@@ -209,7 +209,7 @@ ROUTINE t_rot_delta
 
     --generate path
      -- (lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE, FALSE)
+    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE)
 
     -- approach path
     tstrmn__run_approach_path(LINKING_SPEED, LINKING_STEP, (cds.system), PAD_IDOD, origin, POS(0,START_DIST+100,-1*RETRACT_HEIGHT,0,0,0,(ZEROPOS(1).config_data)))
@@ -310,7 +310,7 @@ ROUTINE t_rot_OD
 
     --generate path
      -- (lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE, FALSE)
+    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE)
 
     -- approach path
     tstrmn__run_approach_path(LINKING_SPEED, LINKING_STEP, (cds.system), PAD_IDOD, origin, POS(0,PAD_START_DIST+100,-1*RETRACT_HEIGHT,0,0,0,(ZEROPOS(1).config_data)))
@@ -401,7 +401,7 @@ ROUTINE t_rot_ID
 
     --generate path
      -- (lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstrot__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE, FALSE)
+    tstrot__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE)
     
     --set path type
     tstrmn__set_prog_names(MOVE_DRYRUN)
@@ -510,7 +510,7 @@ ROUTINE t_rot_pad
 
     --generate path
       -- (lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE, FALSE)
+    tstrot__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE)
 
     -- approach path
     tstrmn__run_approach_path(LINKING_SPEED, LINKING_STEP, (cds.system), PAD_IDOD, origin, offst)
@@ -602,7 +602,7 @@ ROUTINE t_rot_pid
 
     --generate path
       -- (lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstrot__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE, FALSE)
+    tstrot__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE)
     
     --set path type
     tstrmn__set_prog_names(MOVE_DRYRUN)

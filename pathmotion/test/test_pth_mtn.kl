@@ -187,7 +187,7 @@ ROUTINE t_hexagon
 
     --generate path
      --(lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstpth__planPath(lines, contours, PLATE_CORNER, ONEWAY, FALSE, FALSE)
+    tstpth__planPath(lines, contours, PLATE_CORNER, ONEWAY, FALSE)
 
     -- approach path
     tstmtn__run_approach_path(LINKING_SPEED, LINKING_STEP, (cds.system), PAD_IDOD, origin, POS(0,100,-1*RETRACT_HEIGHT,0,0,0,(ZEROPOS(1).config_data)))
@@ -267,7 +267,7 @@ ROUTINE t_pvert_ID
     --generate path
     bbox = tstcanv__get_bounding_box_drawing
       --(lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstpth__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE, FALSE)
+    tstpth__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE)
 
     -- approach path
     tstmtn__run_approach_path(LINKING_SPEED, LINKING_STEP, (cds.system), PAD_IDOD, origin, POS(0,100,RETRACT_HEIGHT,0,0,0,(ZEROPOS(1).config_data)))
@@ -348,7 +348,7 @@ ROUTINE t_pvert_OD
 
     --generate path
       --(lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstpth__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE, FALSE)
+    tstpth__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE)
     --pause
 
     -- approach path
@@ -429,7 +429,7 @@ ROUTINE t_pvert_pad
 
     --generate path
       --(lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstpth__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE, FALSE)
+    tstpth__planPath(lines, contours, OD_CORNER, ONEWAY, FALSE)
     --pause
 
     -- approach path
@@ -508,7 +508,7 @@ ROUTINE t_pvert_pdid
 
     --generate path
       --(lines, contours, start_corner, raster_type, poly_depend, contourFirst)
-    tstpth__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE, FALSE)
+    tstpth__planPath(lines, contours, ID_CORNER, ONEWAY, FALSE)
     --pause
 
     -- approach path
